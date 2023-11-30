@@ -3,5 +3,5 @@ def remove_char_at(str, n):
     nw_s = ""
     for i, c in enumerate(str):
         if i != n:
-            nw_s +=c
+            nw_s += c
     return nw_s
