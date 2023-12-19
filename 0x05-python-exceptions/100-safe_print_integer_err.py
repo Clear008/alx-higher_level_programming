@@ -2,9 +2,9 @@
 from sys import stderr
 
 def safe_print_integer_err(value):
+    _integer = True
     try:
         print("{:d}".format(value))
-        return True
-    except (ValueError, TypeError) as u:
-        print("Exception:", e, file=stderr)
+    except Exception as u:
+        print("Exception:", u, file=stderr)
         return False
