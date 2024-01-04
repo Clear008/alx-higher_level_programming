@@ -5,8 +5,8 @@
 class Rectangle:
     ''' class that desines a rectangle '''
 
-    def __init__(self, width=0, heigh=0):
-        ''' initialisation '''
+    def __init__(self, width=0, height=0):
+        ''' initialization '''
         self.width = width
         self.heigh = heigh
 
