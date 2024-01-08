@@ -1,0 +1,65 @@
+4-print_square.py
+============================
+
+
+Usage of 4-print_square
+=======================
+
+
+Import function
+
+    >>> print_square = __import__('4-print_square').print_square
+   
+test print 2 squares
+
+    >>> print_square(2)
+    ##
+    ##
+
+test print 10 squares
+
+    >>> print_square(10)
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+
+test zero square
+
+    >>> print_square(0)
+
+test negative value
+
+    >>> print_square(-5)
+    Traceback (most recent call last):
+    ValueError: size must be >= 0
+
+test non Integer type 
+
+    >>> print_square("not an int")
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+test float number
+
+    >>> print_square(2.5)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+test empty size
+
+    >>> print_square()
+    Traceback (most recent call last):
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
+test None size
+
+    >>> print_square(None)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
