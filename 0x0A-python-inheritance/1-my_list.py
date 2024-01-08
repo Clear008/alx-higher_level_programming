@@ -6,5 +6,4 @@ class Mylist(list):
     """class with only one attribute"""
     def print_sorted(self):
         """method for printing sorted list"""
-        sorted_list = sorted(self)
-        print(sorted_list)
+        print(sorted(self))
