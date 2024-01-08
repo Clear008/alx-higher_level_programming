@@ -1,0 +1,50 @@
+test that MyList inherits from list:
+	  >>> issubclass(MyList, list)
+	  True
+
+test that appendng works:
+	  >>> list.append(2)
+	  >>> list.append(1)
+	  >>> list.append(4)
+	  >>> list.append(3)
+	  >>> print(list)
+	  [1, 2, 3, 4]
+
+test for list already in correct order:
+	  >>> list.print_sorted()
+	  [1, 2, 3, 4]
+
+test for reversed order list:
+	  >>> list = MyList()
+	  >>> list.append(4)
+	  >>> list.append(3)
+	  >>> list.append(2)
+	  >>> list.append(1)
+	  >>> print(list)
+	  [4, 3, 2, 1]
+	  >>> list.print_sorted()
+	  [1, 2, 3, 4]
+	  >>> print(list)
+	  [4, 3, 2, 1]
+
+test negative number:
+	  >>> list.append(-1)
+	  >>> list.append(5)
+	  >>> print(list)
+	  [4, 3, 2, 1, -1, 5]
+	  >>> list.print_sorted()
+	  [-1, 1, 2, 3, 4, 5]
+	  >>> print(list)
+	  [4, 3, 2, 1, -1, 5]
+
+test too many arguments:
+	  >>> list.print_sorted(1)
+	  Traceback (most recent call last):
+	  ...
+	  TypeError: print_sorted() takes 1 positional argument but 2 were given
+
+test an empty list:
+	  >>> list = MyList()
+	  >>> list.print_sorted()
+	  []
+
