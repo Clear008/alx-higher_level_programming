@@ -64,11 +64,11 @@ class SinglyLinkedList:
         new_node.next_node = current.next_node
         current.next_node = new_node
 
-    def __str__(self):
-        """ print the output"""
-        result = ""
-        current = self.head
-        while current:
-            result += str(current.data) + "\n"
-            current = current.next_node
-        return result
+ def __str__(self):
+        """Define the print() representation of a SinglyLinkedList."""
+        values = []
+        tmp = self.__head
+        while tmp is not None:
+            values.append(str(tmp.data))
+            tmp = tmp.next_node
+        return ('\n'.join(values))
