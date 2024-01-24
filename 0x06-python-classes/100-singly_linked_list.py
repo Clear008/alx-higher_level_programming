@@ -37,9 +37,10 @@ class Node:
 
 class SinglyLinkedList:
     """Represent a node in a singly-linked list."""
+    
     def __init__(self):
         """Initialising the data"""
-        self.head = None
+        self.__head = None
 
     def sorted_insert(self, value):
         """Insert a new Node to the SinglyLinkedList.
