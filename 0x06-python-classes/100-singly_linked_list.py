@@ -42,7 +42,14 @@ class SinglyLinkedList:
         self.head = None
 
     def sorted_insert(self, value):
-        """sorting a new Node into the correct sorted position in the list """
+        """Insert a new Node to the SinglyLinkedList.
+
+        The node is inserted into the list at the correct
+        ordered numerical position.
+
+        Args:
+            value (Node): The new Node to insert.
+        """
         new_node = Node(value)
         if not self.head or value < self.head.data:
             new_node.next_node = self.head
