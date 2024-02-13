@@ -1,2 +1,2 @@
 -- List all databass of MYAQL
-SELECT *FROM
+SHOW *DATABASE;
