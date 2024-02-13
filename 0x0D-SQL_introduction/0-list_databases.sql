@@ -1,2 +1,2 @@
--- List all databass of MYAQL
-SELECT *FROM DATABASES;
+-- Lists all databases of my MySQL server
+SHOW DATABASES;
