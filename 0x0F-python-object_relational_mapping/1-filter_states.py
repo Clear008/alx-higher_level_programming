@@ -4,6 +4,7 @@
 import sys
 import MySQLdb
 
+
 def main():
     """ lists all states start with N """
 
@@ -17,6 +18,7 @@ def main():
         print(row)
     cur.close()
     conn.close()
+
 
 if __name__ == "__main__":
     main()
