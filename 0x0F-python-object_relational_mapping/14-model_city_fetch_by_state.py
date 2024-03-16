@@ -21,9 +21,9 @@ def main():
     session = Session()
 
     cities = session.query(State.name, City.id, City.name) \
-                   .select_from(State) \
-                   .join(City, State.id == City.state_id) \
-                   .order_by(City.id).all()
+                    .select_from(State) \
+                    .join(City, State.id == City.state_id) \
+                    .order_by(City.id).all()
 
     for state_name, city_id, city_name in cities:
         print("{}: ({}) {}".format(state_name, city_id, city_name))
