@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" Takes in the name of a state as an argument and lists all cities of that state """
+""" Takes in the name of a state as an argument
+and lists all cities of that state """
 
 import sys
 import MySQLdb
@@ -14,7 +15,8 @@ def main():
     cur = conn.cursor()
     state_name = sys.argv[4]
     cur.execute("""SELECT cities.name FROM cities
-                   JOIN states ON cities.state_id=states.id WHERE states.name=%s
+                   JOIN states ON cities.state_id=states.id
+                   WHERE states.name=%s
                    ORDER BY cities.id ASC""", (state_name,))
     query_rows = cur.fetchall()
     cities = [row[0] for row in query_rows]
