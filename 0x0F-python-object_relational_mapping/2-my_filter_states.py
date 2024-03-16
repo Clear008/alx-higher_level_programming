@@ -19,7 +19,8 @@ def main():
                 format(state_name))
     query_rows = cur.fetchall()
     for row in query_rows:
-        print(row)
+        if row[1] == sys.argv[4]:
+            print(row)
     cur.close()
     conn.close()
 
