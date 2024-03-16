@@ -21,7 +21,8 @@ def main():
     session = Session()
 
     condition = State.name.like('%a%')
-    deleted_count = session.query(State).filter(condition).delete(synchronize_session=False)
+    deleted_count = session.query(State).filter(
+            condition).delete(synchronize_session=False)
     session.commit()
 
     session.close()
