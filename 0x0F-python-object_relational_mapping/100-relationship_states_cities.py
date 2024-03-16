@@ -8,6 +8,7 @@ from sqlalchemy.orm import sessionmaker
 from relationship_state import State
 from relationship_city import Base, City
 
+
 def main():
     """Create cities"""
 
