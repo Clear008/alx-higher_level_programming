@@ -22,7 +22,7 @@ def main():
     for state in session.query(State).order_by(State.id):
         print("{}: {}".format(state.id, state.name))
         for city in state.cities:
-            print("    {}: {}".format(city.id, city.name))
+            print("\t{}: {}".format(city.id, city.name))
 
     session.close()
 
