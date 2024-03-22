@@ -24,8 +24,6 @@ def main():
         for city in state.cities:
             print("\t{}: {}".format(city.id, city.name))
 
-    session.close()
-
 
 if __name__ == "__main__":
     main()
