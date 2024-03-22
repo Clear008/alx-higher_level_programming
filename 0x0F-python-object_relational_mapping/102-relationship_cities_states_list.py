@@ -20,8 +20,10 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for city in session.query(State).order_by(City.id):
-        print("{}: {} -> {}".format(city.id, city.name, city.state.name))
+    for city, state in session.query(City, State)\
+                              .join(State, State.id == City.state_id)\
+                              .order_by(City.id):
+        print("{}: {} -> {}".format(city.id, city.name, state.name))
 
     session.close()
 
