@@ -21,11 +21,12 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
  
-    session.add(State(name="California"))
+    n_state = State(name="California")
+    session.add(n_state)
     session.commit()
-    session.add(City(name="San Francisco", state=State(name="california")))
+    n_city = City(name="San Francisco", state_id=n_state.id)
+    session.add(n_city)
     session.commit()
-
     session.close()
 
 
