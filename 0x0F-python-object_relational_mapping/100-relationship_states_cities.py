@@ -21,7 +21,7 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    session.add(City(name="San Francisco", state=State(name="california")))
+    session.add(City(name="San Francisco", state_id=State(name="california").id))
     session.commit()
 
     session.close()
