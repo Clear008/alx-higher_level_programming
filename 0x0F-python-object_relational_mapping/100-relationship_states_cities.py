@@ -20,7 +20,7 @@ def main():
 
     Session = sessionmaker(bind=engine)
     session = Session()
- 
+
     n_state = State(name="California")
     session.add(n_state)
     session.commit()
@@ -32,4 +32,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
