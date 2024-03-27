@@ -8,20 +8,17 @@ def find_peak(list_of_integers):
     if list_of_integers == []:
         return None
 
-    high_idx = len(list_of_integers)
-    if high_idx == 1:
-        return list_of_integers[0]
-    if high_idx == 2:
-        return max(list_of_integers)
-
     low_idx = 0
-    mid = ((high_idx - low_idx) // 2) + low_idx
-    mid = int(mid)
+    high_idx = len(list_of_integers) - 1
 
-    if list_of_integers[mid] >= list_of_integers[mid - 1] and\
-            list_of_integers[mid] >= list_of_integers[mid + 1]:
-        return list_of_integers[mid]
-    if mid > 0 and list_of_integers[mid] < list_of_integers[mid + 1]:
-        return find_peak(list_of_integers[mid:])
-    if mid > 0 and list_of_integers[mid] < list_of_integers[mid - 1]:
-        return find_peak(list_of_integers[:mid])
+    while low_idx < high_idx:
+        mid = (low_idx + high_idx) // 2
+
+        if list_of_integers[mid] < list_of_integers[mid + 1]:
+            low_idx = mid + 1
+        elif list_of_integers[mid] < list_of_integers[mid - 1]:
+            high_idx = mid - 1
+        else:
+            return list_of_integers[mid]
+
+    return list_of_integers[low_idx]
