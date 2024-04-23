@@ -1,10 +1,10 @@
 #!/usr/bin/node
 const request = require('request');
-const api_Url = process.argv[2];
+const apiUrl = process.argv[2];
 
-request(api_Url, (error, response, body) => {
+request(apiUrl, (error, response, body) => {
   if (error) {
-    console.error('Error:', error);
+    console.error(error);
   } else {
     const films = JSON.parse(body).results;
     const wedgeAntilles = films.filter(movie =>
@@ -13,4 +13,3 @@ request(api_Url, (error, response, body) => {
     console.log(`${wedgeAntilles.length}`);
   }
 });
-
